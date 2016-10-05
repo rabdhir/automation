@@ -1,0 +1,30 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapsIteration {
+
+	public static void main(String[] args) {
+		// HashMap - Does not maintain order
+		Map<Integer, String> hashMap = new HashMap<Integer, String>();
+		
+		// Keys are unique, value can be duplicate
+		hashMap.put(1, "BMW");
+		hashMap.put(6, "Audi");
+		hashMap.put(4, "Honda");
+		
+		System.out.println("\nIteration # 1");
+		for (Map.Entry<Integer, String> entry: hashMap.entrySet()) {
+			int key = entry.getKey();
+			String value = entry.getValue();
+			System.out.println("Key: " + key + ", value: " + value);
+		}
+		
+		System.out.println("\nIteration # 2");
+		for (Integer key: hashMap.keySet()) {
+			String value = hashMap.get(key);
+			System.out.println("Key: " + key + ", value: " + value);
+		}
+
+	}
+
+}

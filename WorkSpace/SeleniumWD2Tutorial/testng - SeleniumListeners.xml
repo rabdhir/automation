@@ -1,0 +1,15 @@
+<suite name="Listeners TestSuite" parallel="tests">
+
+<listeners>
+	<listener class-name="utilities.SeleniumListeners"></listener>
+</listeners>
+
+
+<test name="FireFox Listeners Test">
+	<classes>
+		<class name="seleniumtutorial.TestNG_TestCase">
+		</class>
+	</classes>
+
+</test>
+</suite> 

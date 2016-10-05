@@ -1,0 +1,26 @@
+<suite name="TestSuite" parallel="tests">
+<test name="FireFox Test">
+<parameters>
+	<parameter name="platform" value="Windows" />
+	<parameter name="browser" value="firefox" />
+	<parameter name="version" value="47.0.1" />
+	<parameter name="url" value="http://www.expedia.com" />
+</parameters>
+	<classes>
+		<class name="seleniumtutorial.SeleniumGrid_ParallelTestFramework">
+		</class>
+	</classes>
+</test>
+<test name="Chrome Test">
+<parameters>
+	<parameter name="platform" value="Windows" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="version" value="53.0.2785.89" />
+	<parameter name="url" value="http://www.expedia.com" />
+</parameters>
+	<classes>
+		<class name="seleniumtutorial.SeleniumGrid_ParallelTestFramework">
+		</class>
+	</classes>
+</test>
+</suite>

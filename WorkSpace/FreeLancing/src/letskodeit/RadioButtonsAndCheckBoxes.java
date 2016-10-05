@@ -1,0 +1,86 @@
+package letskodeit;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class RadioButtonsAndCheckBoxes {
+	WebDriver driver;
+	String baseUrl;
+
+	@Before
+	public void setUp() throws Exception {
+		driver = new FirefoxDriver();
+		baseUrl = "https://letskodeit.teachable.com/p/practice";
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(baseUrl);
+	}
+	
+	@Test
+	public void test() throws InterruptedException {
+		WebElement bmwRadioBtn = driver.findElement(By.id("bmwradio"));
+		bmwRadioBtn.click();
+		
+		Thread.sleep(3000);
+		WebElement benzRadioBtn = driver.findElement(By.id("benzradio"));
+		benzRadioBtn.click();
+		
+		Thread.sleep(3000);
+		WebElement hondaRadioBtn = driver.findElement(By.id("hondaradio"));
+		hondaRadioBtn.click();
+		
+		System.out.println("BMW Radio Button Selected ? " + bmwRadioBtn.isSelected());
+		System.out.println("BENZ Radio Button Selected ? " + benzRadioBtn.isSelected());
+		System.out.println("Honda Radio Button Selected ? " + hondaRadioBtn.isSelected());
+		
+		Thread.sleep(3000);
+		WebElement bmwCheckBtn = driver.findElement(By.id("bmwcheck"));
+		bmwCheckBtn.click();
+		
+		Thread.sleep(3000);
+		WebElement benzCheckBtn = driver.findElement(By.id("benzcheck"));
+		benzCheckBtn.click();
+		
+		Thread.sleep(3000);
+		WebElement hondaCheckBtn = driver.findElement(By.id("hondacheck"));
+		hondaCheckBtn.click();
+		
+		//select[@id='carselect']/option[2]
+		Thread.sleep(3000);
+		WebElement bmwSelectBtn = driver.findElement(By.xpath("//select[@id='carselect']/option[1]"));
+		bmwSelectBtn.click();
+		
+		Thread.sleep(3000);
+		WebElement benzSelectBtn = driver.findElement(By.xpath("//select[@id='carselect']/option[2]"));
+		benzSelectBtn.click();
+		
+		Thread.sleep(3000);
+		WebElement hondaSelectBtn = driver.findElement(By.xpath("//select[@id='carselect']/option[3]"));
+		hondaSelectBtn.click();
+		
+		//Thread.sleep(3000);
+		// bmwCheckBtn.clear(); //element must be user editable to clear
+		
+		//Thread.sleep(3000);
+		//benzCheckBtn.clear();
+		
+		//Thread.sleep(3000);
+		//hondaCheckBtn.clear();
+		
+	}
+
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(5000);
+		driver.quit();
+	}
+
+}

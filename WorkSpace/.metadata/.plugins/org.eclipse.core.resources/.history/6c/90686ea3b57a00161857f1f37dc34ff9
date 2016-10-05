@@ -1,0 +1,28 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class LinkedListDemo2 {
+	/***
+	 * Array List = {0, 1, 2, 3, 4, 5, 6}
+	 * Linked List - [0] > [1] > [2]
+	 * 					<     <
+	 * Array List - when you have to add at the end and remove at the end 
+	 * and retrieving is fast
+	 * Linked list = when you have to add at the beginneing and remove from
+	 * the beginning
+	 */
+	public static void runDuration(List<Integer> list, String listType) {
+		System.out.println("\nBeginning of the duration for " + listType);
+		long startTime = System.currentTimeMillis();
+		
+		long endTime = System.currentTimeMillis();
+		long duration = endTime - startTime;
+		System.out.println("Duration of the list " + listType + " is " + duration + " ms.");
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+}

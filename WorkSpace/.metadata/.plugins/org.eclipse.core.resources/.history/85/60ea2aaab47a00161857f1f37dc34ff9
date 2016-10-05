@@ -1,0 +1,19 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class LinkedListDemo2 {
+	/***
+	 * Array List = {0, 1, 2, 3, 4, 5, 6}
+	 * Linked List - [0] > [1] > [2]
+	 * 					<     <
+	 * Array List - when you have to add at the end and remove at the end 
+	 * and retrieving is fast
+	 * Linked list = when you have to add at the beginneing and remove from
+	 * the beginning
+	 */
+	public static void main(String[] args) {
+			
+		
+	}
+}

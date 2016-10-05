@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class SetsDemo {
+
+	public static void main(String[] args) {
+		
+		//HashSet - Does not maintain order
+		Set<String> set = new HashSet<String>();
+			
+		set.add("BMW");
+		set.add("Audi");
+		set.add("Honda");
+		set.add("Honda");
+		
+		System.out.println(set);
+		
+		for (String item: set) {
+			System.out.print(item + " ");
+		}
+		
+		List<String> list = new ArrayList<String>();
+		
+		list.add("BMW");
+		list.add("Audi");
+		list.add("Honda");
+		list.add("Honda");
+		System.out.println(list);
+	}
+
+}

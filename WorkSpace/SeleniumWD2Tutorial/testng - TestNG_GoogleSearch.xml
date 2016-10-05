@@ -1,0 +1,9 @@
+<suite name="MultiThreading TestSuite" parallel="classes" thread-count="2">
+<test name="FireFox Listeners Test">
+<classes>
+	<class name="seleniumtutorial.TestNG_MultiThreading"></class>
+	<class name="seleniumtutorial.TestNG_GoogleSearch"></class>
+</classes>
+
+</test>
+</suite> 

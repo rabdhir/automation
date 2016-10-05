@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+
+public class LinkedListDemo {
+
+	public static void main(String[] args) {
+		ArrayList<String> cars = new ArrayList<String>();
+		// Adding
+		cars.add("BMW");
+		cars.add("Honda");
+		cars.add("Audi");
+		
+		// Size
+		int size = cars.size();
+		System.out.println("Size of cars is: " + size);
+
+		// Get
+		System.out.println("The item of index 1 is: " + cars.get(1));
+		
+		//Iteration
+		System.out.println("Iteration example");
+		for (int i=0; i < size; i++) {
+			System.out.println("Item on index " + i + " is " + cars.get(i));
+		}
+		
+		System.out.println("\nNext for loop example");
+		for (String car: cars) {
+			System.out.println("The item is :" + car);
+		}
+		
+		/*
+		 * To remove lots of thing, use LinkList, instead of ArrayList
+		 * this is for memory management efficiency 
+		 */
+		// To remove
+		//This will remove the second item
+		cars.remove(size - 1);
+		System.out.println("\nNext for loop example after removing");
+		for (String car: cars) {
+			System.out.println("The item is :" + car);
+		}
+	}
+
+}
